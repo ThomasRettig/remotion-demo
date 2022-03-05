@@ -64,13 +64,13 @@ export const AudiogramComposition = () => {
 			<div
 				className="flex flex-col w-full h-full text-white p-4 bg-black"
 				style={{
-					fontFamily: 'IBM Plex Sans',
+					fontFamily: 'Inter var',
 				}}
 			>
 				<div className="flex flex-row">
 					<Img className="rounded-lg" src={coverImg} />
 
-					<div className="ml-4 leading-tight font-extrabold text-gray-700">
+					<div className="ml-4 mt-0 font-semibold opacity-50">
 						#234 – Money, Kids, and Choosing Your Market with Justin Jackson of
 						Transistor.fm
 					</div>
@@ -80,7 +80,7 @@ export const AudiogramComposition = () => {
 					<AudioViz />
 				</div>
 
-				<div className="mt-2 text-2xl font-semibold">
+				<div className="mt-2 text-xl font-normal">
 					<PaginatedSubtitles
 						src={subtitlesSource}
 						startFrame={offset}
@@ -101,7 +101,7 @@ export const AudiogramComposition = () => {
 										),
 										transform: `perspective(1000px) translateY(${interpolate(
 											frame,
-											[item.start, item.start + 15],
+											[item.start, item.start + 5],
 											[0.5, 0],
 											{
 												easing: Easing.out(Easing.quad),
